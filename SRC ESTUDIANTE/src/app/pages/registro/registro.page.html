@@ -1,0 +1,51 @@
+<ion-header [translucent]="true" class="fondoheader">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text=""
+          color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>CHECK-IN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">Registrate</ion-card-title>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-input  type="number" label="RUT:"  labelPlacement="floating" placeholder="Ingrese su RUT"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="nom" [(ngModel)]="nom" label="Nombre:" labelPlacement="floating" type="text" placeholder="Ingrese su nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Apellido:" labelPlacement="floating" type="text" placeholder="Ingrese su apellido"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label >Fecha de Nacimiento:</ion-label>
+        <ion-datetime-button datetime="datetime"></ion-datetime-button>
+        <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+            <ion-datetime id="datetime"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Correo:" labelPlacement="floating" type="text" placeholder="Ingrese su correo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Contraseña:" labelPlacement="floating" type="password" placeholder="Ingrese su contraseña"></ion-input>
+      </ion-item>
+    </ion-list>
+    <br>
+    <div class="buton">
+      <ion-button (click)="goinicio()">
+        Crear Cuenta
+      </ion-button>
+    </div>
+  </ion-card>
+</ion-content>

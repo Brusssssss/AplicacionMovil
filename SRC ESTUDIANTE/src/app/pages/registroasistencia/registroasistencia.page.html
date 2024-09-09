@@ -1,0 +1,70 @@
+<ion-header [translucent]="true" class="fondoheader">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text=""
+          color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>CHECK-IN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">Registra tu Asistencia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-select label="Curso" placeholder="Elije tu curso">
+            <ion-select-option value="pdam">Programación de App Moviles</ion-select-option>
+            <ion-select-option value="ep">Etica Profesional</ion-select-option>
+            <ion-select-option value="iep">Integrated English Practice</ion-select-option>
+            <ion-select-option value="ssc">Seguridad en Sistemas Computacionales</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select label="Sección" placeholder="Elije tu sección">
+            <ion-select-option value="007">007</ion-select-option>
+            <ion-select-option value="004">004</ion-select-option>
+            <ion-select-option value="002">002</ion-select-option>
+            <ion-select-option value="009">009</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select label="Docente" placeholder="Elije tu docente">
+            <ion-select-option value="vspl">Viviana Soledad Poblete Lopez</ion-select-option>
+            <ion-select-option value="damv">Daniel Alonso Montero Valenzuela</ion-select-option>
+            <ion-select-option value="ipjm">Isidora Paz Jorquiera Montero</ion-select-option>
+            <ion-select-option value="gjrs">Gonzalo Javier Rosende Salazar</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select label="Sala" placeholder="Elije tu sala">
+            <ion-select-option value="202">202</ion-select-option>
+            <ion-select-option value="208">208</ion-select-option>
+            <ion-select-option value="441">441</ion-select-option>
+            <ion-select-option value="445">445</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label >Fecha</ion-label>
+          <ion-datetime-button datetime="datetime"></ion-datetime-button>
+          <ion-modal [keepContentsMounted]="true">
+          <ng-template>
+          <ion-datetime id="datetime"></ion-datetime>
+          </ng-template>
+        </ion-modal>
+        </ion-item>
+      </ion-list>
+      <br>
+      <div class="buton">
+        <ion-button (click)="goqr()">
+          Generar QR
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
