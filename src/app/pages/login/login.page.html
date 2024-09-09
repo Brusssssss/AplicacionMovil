@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true" class="fondo">
+  <!--ion-text class="titulo">
+    <h1>Inicio de Sesion</h1>
+  </ion-text!-->
+  <ion-card class="carta">
+    <ion-card-header>
+      <ion-card-title>CHECK-IN</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <div class="fila">
+        <ion-icon slot="start" name="person-outline" class="icono"></ion-icon>
+        <ion-item>
+          <ion-input placeholder="Ingrese su usuario" class="texto"></ion-input>
+        </ion-item>
+      </div>
+      <div class="fila">
+        <ion-icon slot="start" name="lock-closed-outline" class="icono"></ion-icon>
+        <ion-item>
+          <ion-input placeholder="Ingrese su contraseña" class="texto"></ion-input>
+        </ion-item>
+      </div>
+      <p class="recu">Recuperar Contraseña?</p>
+      <div class="btngo">
+        <ion-button (click)="iniciarSesion()">
+          Iniciar Sesion
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-text (click)="goregistro()" class="down">
+    <h1 class="down1">No tienes cuenta? Registrate</h1>
+  </ion-text>
+  
+
+</ion-content>

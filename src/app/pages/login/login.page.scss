@@ -1,0 +1,48 @@
+.fondo{
+    --background:black;
+}
+
+.carta{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 300px;
+}
+ion-card-title{
+    text-align: center;
+}
+.fila {
+    display: flex; /* Establece el contenedor como un contenedor flex */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    padding: 10px; /* Espacio alrededor del contenido */
+  }
+  
+  .icono {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+  }
+  
+  .texto {
+    font-size: 16px; /* Ajusta el tamaño del texto */
+  }
+.btngo{
+    text-align: center;
+}
+.recu {
+    background: none; /* Sin color de fondo */
+    border: none; /* Sin borde */
+    color: blue; /* Color del texto */
+    text-decoration: underline; /* Subraya el texto */
+    cursor: pointer; /* Cambia el cursor a mano, indicando que es clickeable */
+    font-size: 16px; /* Tamaño del texto */
+    padding: 10px; /* Espaciado interno */
+    text-align: center;
+  }
+.down{
+  text-align: center;
+  
+}
+.down1{
+  margin-top: 230px;
+  font-size: 16px;
+  color: white;
+  text-decoration: underline;
+}

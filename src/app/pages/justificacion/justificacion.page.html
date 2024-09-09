@@ -1,0 +1,52 @@
+<ion-header [translucent]="true" class="fondoheader">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text=""
+          color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>CHECK-IN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">Justifica tu Inasistencia</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-input label="Correo del Docente" type="email" placeholder="Introduce su correo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-select label="Sala" placeholder="Elije tu sala">
+            <ion-select-option value="202">202</ion-select-option>
+            <ion-select-option value="208">208</ion-select-option>
+            <ion-select-option value="441">441</ion-select-option>
+            <ion-select-option value="445">445</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-select label="Seccion" placeholder="Elije tu seccion">
+            <ion-select-option value="006">006</ion-select-option>
+            <ion-select-option value="002">002</ion-select-option>
+            <ion-select-option value="009">009</ion-select-option>
+            <ion-select-option value="007">007</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-textarea placeholder="Escribe tu justificación aquí"[autoGrow]="true">
+        </ion-textarea>
+        </ion-item>
+      </ion-list>
+      <br>
+      <div class="buton">
+        <ion-button (click)="enviar()" >
+          Enviar
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
