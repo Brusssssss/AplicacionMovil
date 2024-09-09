@@ -1,0 +1,150 @@
+<ion-header [translucent]="true" class="fondoheader">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text=""
+          color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>CHECK-IN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">Gestion de Clases</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!--PRIMER ACORDEON-->
+      <ion-accordion-group [value]="['first']">
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Programacion de App Moviles</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-list>
+              <ion-item>
+                <ion-label>Seccion</ion-label>
+                <ion-select  placeholder="Selecciona la seccion">
+                <ion-select-option *ngFor="let seccion of seccion" [value]="seccion">{{ seccion.name }}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+              <ion-item>
+                <ion-label>Sala</ion-label>
+                <ion-select  placeholder="Selecciona la sala">
+                <ion-select-option *ngFor="let salas of salas" [value]="salas">{{ salas.name }}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+              <ion-item>
+                <ion-label>Fecha</ion-label>
+                <ion-datetime-button datetime="datetime"></ion-datetime-button>
+                <ion-modal [keepContentsMounted]="true">
+                  <ng-template>
+                    <ion-datetime id="datetime"></ion-datetime>
+                  </ng-template>
+                </ion-modal>
+              </ion-item>
+            </ion-list>
+            <div class="buton">
+              <ion-button (click)="goqr()" size="medium">
+                <ion-icon slot="icon-only" name="qr-code-outline"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+      <!--TERMINO DEL PRIMER ACORDEON-->
+      <!--SEGUNDO ACORDEON-->
+      <ion-accordion-group [value]="['first']">
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Programacion Web</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-list>
+              <ion-item>
+                <ion-label>Seccion</ion-label>
+                <ion-select  placeholder="Selecciona la seccion">
+                <ion-select-option *ngFor="let seccion of seccion" [value]="seccion">{{ seccion.name }}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+              <ion-item>
+                <ion-label>Sala</ion-label>
+                <ion-select  placeholder="Selecciona la sala">
+                <ion-select-option *ngFor="let salas of salas" [value]="salas">{{ salas.name }}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+              <ion-item>
+                <ion-label>Fecha</ion-label>
+                <ion-datetime-button datetime="datetime"></ion-datetime-button>
+                <ion-modal [keepContentsMounted]="true">
+                  <ng-template>
+                    <ion-datetime id="datetime"></ion-datetime>
+                  </ng-template>
+                </ion-modal>
+              </ion-item>
+            </ion-list>
+            <div class="buton">
+              <ion-button (click)="goqr()" size="medium">
+                <ion-icon slot="icon-only" name="qr-code-outline"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+      <!--TERMINO SEGUNDO ACORDEON-->
+      <!--COMIENZO DEL TERCER ACORDEON-->
+      <ion-accordion-group [value]="['first']">
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Programacion de Algoritmos</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-list>
+              <ion-item>
+                <ion-label>Seccion</ion-label>
+                <ion-select  placeholder="Selecciona la seccion">
+                <ion-select-option *ngFor="let seccion of seccion" [value]="seccion">{{ seccion.name }}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+              <ion-item>
+                <ion-label>Sala</ion-label>
+                <ion-select  placeholder="Selecciona la sala">
+                <ion-select-option *ngFor="let salas of salas" [value]="salas">{{ salas.name }}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+              <ion-item>
+                <ion-label>Fecha</ion-label>
+                <ion-datetime-button datetime="datetime"></ion-datetime-button>
+                <ion-modal [keepContentsMounted]="true">
+                  <ng-template>
+                    <ion-datetime id="datetime"></ion-datetime>
+                  </ng-template>
+                </ion-modal>
+              </ion-item>
+            </ion-list>
+            <div class="buton">
+              <ion-button (click)="goqr()" size="medium">
+                <ion-icon slot="icon-only" name="qr-code-outline"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+      <!--TERMINO DEL TERCER ACORDEON-->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

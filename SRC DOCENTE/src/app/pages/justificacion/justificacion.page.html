@@ -1,0 +1,108 @@
+<ion-header [translucent]="true" class="fondoheader">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text=""
+          color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title>CHECK-IN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="titulo">Justificaciones</ion-card-title>
+    </ion-card-header>
+              <!--JUSTIFICACIONES DE APP MOVILES-->
+    <ion-accordion-group [value]="['first']">
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Programación de APP Moviles</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ion-grid [fixed]="true">
+            <ion-row>
+              <ion-col>Felipe Sandoval</ion-col>
+              <ion-col>006-D</ion-col>
+              <ion-col>09/09/2024</ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-accordion-group>
+            <ion-accordion value="first">
+              <ion-item slot="header" color="light">
+                <ion-label>Ver Justificación</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content">
+                <p>
+                  Profesora voy a llegar mas tarde porque estoy en medico ahora, le mandé la consulta por correo
+                </p>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+              <!--TERMINO DE JUSTIFICACIONES DE APP MOVILES-->
+              <!--JUSTIFICACIONES DE PROGRAMACION WEB-->
+    <ion-accordion-group [value]="['first']">
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Programacion Web</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ion-grid [fixed]="true">
+            <ion-row>
+              <ion-col>Angel Arriagada</ion-col>
+              <ion-col>004-D</ion-col>
+              <ion-col>12/09/2024</ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-accordion-group>
+            <ion-accordion value="first">
+              <ion-item slot="header" color="light">
+                <ion-label>Ver Justificación</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content">
+                <p>
+                  Hola profesora, llegare un poco tarde porque recien sali de mi practica, nos vemos
+                </p>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+            <!--TERMINO DE JUSTIFICACIONES PROGRAMACION WEB-->
+            <!--JUSTIFICACIONES DE PROGRAMACION DE ALGORITMOS-->
+    <ion-accordion-group [value]="['first']">
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label>Programacion de Algoritmos</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ion-grid [fixed]="true">
+            <ion-row>
+              <ion-col>Laura Troncoso</ion-col>
+              <ion-col>002-D</ion-col>
+              <ion-col>12/09/2024</ion-col>
+            </ion-row>
+          </ion-grid>
+          <ion-accordion-group>
+            <ion-accordion value="first">
+              <ion-item slot="header" color="light">
+                <ion-label>Ver Justificación</ion-label>
+              </ion-item>
+              <div class="ion-padding" slot="content">
+                <p>
+                  Hola profesora, no podre ir por fuerzas mayores
+                </p>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-card>
+</ion-content>
